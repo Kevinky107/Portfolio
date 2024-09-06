@@ -32,14 +32,14 @@ function App() {
       </div>
       <div>
         <Icon img='folder.png' text="Stack Tecnológico" click={clickSkills}/>
-        <Icon img='folder.png' text="Abilities" click={clickAbilities}/>
+        <Icon img='folder.png' text="Aptitudes" click={clickAbilities}/>
       </div>
       <div>
         <Icon img='folder.png' text="Proyectos"/>
       </div>
       {
         showAbilities &&
-        <Window name="Abilities" close={closeAbilities}>
+        <Window name="Aptitudes" close={closeAbilities}>
           
         </Window>
       }
