@@ -1,0 +1,23 @@
+picture {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5em;
+    width: 6em;
+
+    img {
+        width: 5em; 
+    }
+
+    p {
+        max-width: 8em;
+        text-align: center;
+    }
+
+    
+}
+
+picture:hover {
+    cursor: pointer;
+    background-color: rgba(177, 216, 235, 0.24);
+}
