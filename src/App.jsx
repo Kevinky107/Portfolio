@@ -6,7 +6,7 @@ import Window from './components/window/window';
 function App() {
 
   const [showSkills, setShowSkills] = useState(false)
-  const [showHabilidades, setShowHabilidades] = useState(false)
+  const [showAbilities, setShowAbilities] = useState(false)
 
   const clickSkills = () => {
     setShowSkills(true)
@@ -16,12 +16,12 @@ function App() {
     setShowSkills(false)
   }
 
-  const clickHabilidades = () => {
-    setShowHabilidades(true)
+  const clickAbilities = () => {
+    setShowAbilities(true)
   }
 
-  const closeHabilidades = () => {
-    setShowHabilidades(false)
+  const closeAbilities = () => {
+    setShowAbilities(false)
   }
 
   return (
@@ -32,14 +32,14 @@ function App() {
       </div>
       <div>
         <Icon img='folder.png' text="Stack Tecnológico" click={clickSkills}/>
-        <Icon img='folder.png' text="Habilidades" click={clickHabilidades}/>
+        <Icon img='folder.png' text="Abilities" click={clickAbilities}/>
       </div>
       <div>
         <Icon img='folder.png' text="Proyectos"/>
       </div>
       {
-        showHabilidades &&
-        <Window name="Habilidades" close={closeHabilidades}>
+        showAbilities &&
+        <Window name="Abilities" close={closeAbilities}>
           
         </Window>
       }
