@@ -85,6 +85,8 @@ function App() {
       }
       { showPapelera &&
         <Window name="Papelera" close={closePapelera}>
+          <Ad img='yt.png' text='Proyectos Antiguos' click={() => {window.open('https://www.youtube.com/@kevinky1075/videos', '_blank');}}/>
+          <Icon img='pdf.png' text="tfg.pdf" click={() => {window.open('TFG.pdf', '_blank');}}/>
         </Window>
       }
       { showPro &&
