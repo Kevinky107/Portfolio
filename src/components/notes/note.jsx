@@ -1,11 +1,11 @@
-import './window.css';
+import './note.css';
 import Draggable from 'react-draggable';
 
-function Window({name, close, children}) {
+function note({name, close, children}) {
 
   return (
     <Draggable>
-        <div className='popup'>
+        <div className='note'>
             <div className="header">
                 <h4>{name}</h4>
                 <picture id="close" onClick={close}>
@@ -20,4 +20,4 @@ function Window({name, close, children}) {
   )
 }
 
-export default Window
+export default note

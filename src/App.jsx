@@ -2,11 +2,16 @@ import { useState } from 'react';
 import './app.css';
 import Icon from './components/icons/icon';
 import Window from './components/window/window';
+import Note from './components/notes/note';
+import Ad from './components/ad/ad';
 
 function App() {
 
   const [showSkills, setShowSkills] = useState(false)
   const [showAbilities, setShowAbilities] = useState(false)
+  const [showMe, setShowMe] = useState(false)
+  const [showPro, setShowPro] = useState(false)
+  const [showPapelera, setShowPapelera] = useState(false)
 
   const clickSkills = () => {
     setShowSkills(true)
@@ -24,23 +29,80 @@ function App() {
     setShowAbilities(false)
   }
 
+  const clickMe = () => {
+    setShowMe(true)
+  }
+
+  const closeMe = () => {
+    setShowMe(false)
+  }
+
+  const clickPro = () => {
+    setShowPro(true)
+  }
+
+  const closePro = () => {
+    setShowPro(false)
+  }
+
+  const clickPapelera = () => {
+    setShowPapelera(true)
+  }
+
+  const closePapelera = () => {
+    setShowPapelera(false)
+  }
+
   return (
     <div id="container">
       <div>
-        <Icon img='notes.png' text="Sobre-mi.txt"/>
-        <Icon img='pdf.png' text="cv.pdf"/>
+        <Icon img='notes.png' text="Sobre-mi.txt" click={clickMe}/>
+        <Icon img='pdf.png' text="cv.pdf" click={() => {window.open('CV_Kevin_Agudo.pdf', '_blank');}}/>
       </div>
       <div>
         <Icon img='folder.png' text="Stack Tecnológico" click={clickSkills}/>
         <Icon img='folder.png' text="Aptitudes" click={clickAbilities}/>
       </div>
       <div>
-        <Icon img='folder.png' text="Proyectos"/>
+        <Icon img='folder.png' text="Proyectos Recientes" click={clickPro}/>
       </div>
-      {
-        showAbilities &&
+      <div className='right'>
+        <Ad img='linkedin.png' text='Linkedin' click={() => {window.open('https://www.linkedin.com/in/kevin-agudo-montil/', '_blank');}}/>
+      </div>
+      <div className='right'> 
+        <Ad img='github.png' text='Github' click={() => {window.open('https://github.com/Kevinky107', '_blank');}}/>
+      </div>
+      <div className='right'> 
+        <Icon img='papelera.png' text='Papelera' click={clickPapelera}/>
+      </div>
+      { showMe &&
+        <Note name="Sobre mi" close={closeMe}>
+          <p>Hola, soy Kevin Agudo Montil, vivo en Valencia, España. Soy ingeniero multimedia y desarrollador fullstack con trayectoria en la creación de aplicaciones para diversas plataformas, así como en el desarrollo de videojuegos. 
+            <br></br><br></br> Soy una persona exigente con mi trabajo, siempre buscando estar orgulloso del resultado final. Mi formación en Ingeniería Multimedia y mi experiencia en tecnologías como Angular, React y Unity, junto con mi habilidad para programar en múltiples lenguajes, me han permitido desarrollarme como un profesional versátil y comprometido con la calidad. Mi creatividad y capacidad para aprender rápidamente me han llevado a destacarme en el desarrollo de soluciones innovadoras y en la resolución de problemas complejos.
+            <br></br><br></br> Además, mi certificación en Scrum y mi enfoque en metodologías ágiles han fortalecido mis habilidades en la gestión de proyectos y en la colaboración en equipo. Disfruto especialmente de la programación y del desafío constante de adaptarme a nuevas tecnologías. Tengo una gran capacidad para trabajar en equipo, junto con mi iniciativa y habilidades de comunicación y liderazgo.
+          </p>
+        </Note>
+      }
+      { showPapelera &&
+        <Window name="Papelera" close={closePapelera}>
+        </Window>
+      }
+      { showPro &&
+        <Window name="Proyectos Recientes" close={closePro}>
+        </Window>
+      }
+      { showAbilities &&
         <Window name="Aptitudes" close={closeAbilities}>
-          
+          <Icon img='/abi/rprob.png' text="Resolución de Problemas"/>
+          <Icon img='/abi/panacri.png' text="Pensamiento analítico y crítico"/>
+          <Icon img='/abi/adet.png' text="Atención al detalle"/>
+          <Icon img='/abi/gtiem.png' text="Gestión del tiempo"/>
+          <Icon img='/abi/cefec.png' text="Comunicación efectiva"/>
+          <Icon img='/abi/resi.png' text="Resiliencia"/>
+          <Icon img='/abi/capre.png' text="Capacidad aprendizaje continuo"/>
+          <Icon img='/abi/crea.png' text="Creatividad"/>
+          <Icon img='/abi/adap.png' text="Adaptabilidad"/>
+          <Icon img='/abi/cvisual.png' text="Comunicación visual"/>
         </Window>
       }
       { showSkills &&
@@ -74,6 +136,7 @@ function App() {
           <Icon img='/stack/matlab.png' text="Matlab"/>
         </Window>
       }
+      
     </div>
   )
 }

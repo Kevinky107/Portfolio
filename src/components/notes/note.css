@@ -1,4 +1,4 @@
-.popup{
+.note{
     position: absolute;
     z-index: 2;
     left: 0;
@@ -47,11 +47,16 @@
     }
 
     .main {
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(255, 253, 150);
         margin: auto;
         width: 98%;
         height: 92%;
         border-radius: 0.5em;
         overflow: auto;
+
+        p{
+            padding: 2em;
+            line-height: 2em;
+        }
     }
 }

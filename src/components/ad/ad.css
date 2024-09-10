@@ -1,13 +1,14 @@
-#imagecont {
+#image {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
     margin: 1.5em;
     width: 6em;
+    position: relative;
     height: 6em;
 
     img {
-        width: 5em; 
+        width: 4.5em; 
     }
 
     p {
@@ -15,10 +16,21 @@
         text-align: center;
     }
 
+    #image2 {
+        position: relative;
+
+        #ad {
+            position: absolute;
+            left: 0em;
+            bottom: 0.2em;
+            width: 1em;
+        }
+    }
+
     
 }
 
-#imagecont:hover {
+#image:hover {
     cursor: pointer;
     background-color: rgba(177, 216, 235, 0.24);
 }
