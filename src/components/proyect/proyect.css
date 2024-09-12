@@ -38,12 +38,14 @@
         top: 3em;
         z-index: 2;
         border-radius: 0.5em;
+        box-shadow: 3px 3px 5px rgba(170, 170, 170, 0.342);
 
         button{
             border: none;
             background-color: rgb(216, 241, 255);
-            padding-top: 0.2em;
+            margin-top: 0.3em;
             width: 100%;
+            padding-block: 0.3em;
         }
 
         button:hover {

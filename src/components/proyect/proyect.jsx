@@ -11,7 +11,6 @@ function Proyect({img, text, info, repo, web}) {
         <p>{text}</p>
         <div className='info'>
           {info}
-          <br></br><br></br>
           <div>
             <button onClick={() => {window.open(web, '_blank');}}>WEB</button>
           </div>
