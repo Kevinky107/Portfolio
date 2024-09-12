@@ -4,6 +4,7 @@ import Icon from './components/icons/icon';
 import Window from './components/window/window';
 import Note from './components/notes/note';
 import Ad from './components/ad/ad';
+import Proyect from './components/proyect/proyect';
 
 function App() {
 
@@ -91,6 +92,22 @@ function App() {
       }
       { showPro &&
         <Window name="Proyectos Recientes" close={closePro}>
+          <Proyect img='/pro/oxygenshop.png' text="OXYGENshop" 
+          info='Single Page Aplication creada con html, css y js, responsive por lo que se verá de manera adecuada tanto en desktop como en móvil'
+          web='https://kevinky107.github.io/OXYGENShop/'
+          repo='https://github.com/Kevinky107/OXYGENShop'/>
+          <Proyect img='/pro/images.png' text="Image Gallery" 
+          info='Aplicación Web hecha con React que muestra una galeria de fotos aleatoria, permite la busqueda de fotos y su guardado'
+          web='http://kevinky-image-gallery.s3-website.eu-west-3.amazonaws.com/'
+          repo='https://github.com/Kevinky107/kevin-image-gallery'/>
+          <Proyect img='/pro/miranda.svg' text="Hotel Miranda" 
+          info='Web de un hotel creada con html, css y js, es responsive'
+          web='https://kevinky107.github.io/Hotel-Miranda/'
+          repo='https://github.com/Kevinky107/Hotel-Miranda'/>
+          <Proyect img='/pro/Dashboard.png' text="Dashboard Miranda" 
+          info='Web creada con React que permite la gestión del Hotel Miranda, para entrar usar el email kevinagudomontil@gmail.com y la contraseña 1234'
+          web='http://kevin-hotel-miranda-dashboard.s3-website.eu-west-3.amazonaws.com/'
+          repo='https://github.com/Kevinky107/Hotel-Miranda-Dashboard'/>
         </Window>
       }
       { showAbilities &&

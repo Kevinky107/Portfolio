@@ -1,6 +1,6 @@
 import './ad.css'
 
-function Ad({img, text, info, click}) {
+function Ad({img, text, click}) {
 
   return (
     <picture id='image' onClick={click}>
@@ -9,9 +9,6 @@ function Ad({img, text, info, click}) {
           <img id='ad' src='web.jpeg' alt='acceso directo'/>
         </picture>
         <p>{text}</p>
-        <div className='info'>
-          <p>{info}</p>
-        </div>
     </picture>
   )
 }

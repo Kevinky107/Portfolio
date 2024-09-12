@@ -1,0 +1,65 @@
+#image {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5em;
+    width: 6em;
+    position: relative;
+    height: 6em;
+
+    img {
+        width: 4.5em; 
+    }
+
+    p {
+        max-width: 8em;
+        text-align: center;
+    }
+
+    #image2 {
+        position: relative;
+
+        #ad {
+            position: absolute;
+            left: 0em;
+            bottom: 0.2em;
+            width: 1em;
+        }
+    }
+
+    .info{
+        width: 15em;
+        padding: 0.5em;
+        position: absolute;
+        background-color: rgb(216, 241, 255);
+        font-size: 0.8rem;
+        display: none;
+        right: -10em;
+        top: 3em;
+        z-index: 2;
+        border-radius: 0.5em;
+
+        button{
+            border: none;
+            background-color: rgb(216, 241, 255);
+            padding-top: 0.2em;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: rgb(174, 225, 255);
+            cursor: pointer;
+        }
+    }
+
+    
+}
+
+#image:hover {
+    cursor: pointer;
+    background-color: rgba(177, 216, 235, 0.24);
+
+    .info{
+        display: block;
+    }
+}
